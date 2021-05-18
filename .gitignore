@@ -1,4 +1,8 @@
 #项目目录下内容
-/out
-/.idea
-/*.iml
+/01、MyStaticServer/out/*
+/01、MyStaticServer/.idea/*
+/01、MyStaticServer/*.iml
+
+/02、MyServlet/out/*
+/02、MyServlet/.idea/*
+/02、MyServlet/*.iml
