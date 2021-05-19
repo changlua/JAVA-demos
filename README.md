@@ -101,11 +101,38 @@
 
 ![image-20210518090450990](https://gitee.com/changluJava/picture-bed/raw/master/2021-5/20210518090451.png)  
 
+<br/>
+
+---
+
+# 03、apache-tomcat-8.5.66-src(tomcat源码，可以本地跑)
+
+**核心源码讲解**：[手撕 tomcat 核心源码15讲【全网最详细tomcat 源码解析，底层原理 】](https://www.bilibili.com/video/BV1w64y1i7pg?p=1)
+
+<br/>
+
+> 本地运行Tomcat方式：使用本目录下的/03、apache-tomcat-8.5.66-src工程文件即可
+
+IDEA加载之后，修改`VM-options`的参数
+
+![image-20210519202428701](https://gitee.com/changluJava/picture-bed/raw/master/2021-5/20210519202428.png)  
+
+```java
+-Dcatalina.home=C:\Users\93997\Desktop\apache-tomcat-8.5.66-src\source 
+-Dcatalina.base=C:\Users\93997\Desktop\apache-tomcat-8.5.66-src\source 
+-Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager 
+-Djava.util.logging.config.file=C:\Users\93997\Desktop\apache-tomcat-8.5.66-src\source\conf\logging.properties
+```
+
+修改的内容就是其中`source`路径！
 
 
 
 
 
+
+
+<br/>
 
 ---
 

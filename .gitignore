@@ -7,8 +7,7 @@
 /02、MyServlet/out/*
 /02、MyServlet/.idea/*
 /02、MyServlet/*.iml
-=======
-/out/*
-/.idea/*
-/*.iml
->>>>>>> 14483680c5b5922f58ea8a531649e0b584128585
+
+/03、apache-tomcat-8.5.66-src/*.iml
+/03、apache-tomcat-8.5.66-src/.idea/*
+/03、apache-tomcat-8.5.66-src/target/*
