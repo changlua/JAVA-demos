@@ -181,13 +181,25 @@ step2：运行项目即可！
 
 并且其中还集成了自定义login页面以及自定义403页面，使用的form表单认证形式。
 
+**详细代码说明可见**：
 
+![image-20210920121758637](https://gitee.com/changluJava/picture-bed/raw/master/2021/20210920121758.png)  
 
+<br/>
 
+---
 
+## 02、springsecurity整合oauth2
 
+**包含两个服务**：授权服务端、会员服务端。
 
+整个模式与qq登陆、微信登陆、支付都是类似，通过appid、secret换取到code，接着服务器端拿到code值去得到accesstoken。
 
+最终通过accesstoken来去访问一些会员接口。
+
+**详细文档说明见**：
+
+![image-20210920122031553](https://gitee.com/changluJava/picture-bed/raw/master/2021/20210920122031.png)  
 
 
 
@@ -195,4 +207,4 @@ step2：运行项目即可！
 
 ---
 
-整理者：长路  时间：2021.5.16   最近更新时间：2021.9.20
+整理者：长路  时间：2021.5.16   最近更新时间：2021.9.20 12:21

@@ -1,0 +1,7 @@
+changlu:
+  # 对应授权服务端设置的appid以及appsecret
+  appid: test
+  appsecret: 123456
+server:
+  # 设置服务器端口
+  port: 8081
