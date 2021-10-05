@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/course-service/course-list/course-list.iml" filepath="$PROJECT_DIR$/course-service/course-list/course-list.iml" />
+      <module fileurl="file://$PROJECT_DIR$/course-service/course-price/course-price.iml" filepath="$PROJECT_DIR$/course-service/course-price/course-price.iml" />
+      <module fileurl="file://$PROJECT_DIR$/course-service/course-service.iml" filepath="$PROJECT_DIR$/course-service/course-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/course-zuul/course-zuul.iml" filepath="$PROJECT_DIR$/course-zuul/course-zuul.iml" />
+      <module fileurl="file://$PROJECT_DIR$/eurake-server/eurake-server.iml" filepath="$PROJECT_DIR$/eurake-server/eurake-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-cloud-course-practice.iml" filepath="$PROJECT_DIR$/spring-cloud-course-practice.iml" />
+    </modules>
+  </component>
+</project>

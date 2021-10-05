@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="eurake-server" />
+        <module name="course-list" />
+        <module name="course-zuul" />
+        <module name="course-price" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="course-list" target="1.8" />
+      <module name="course-price" target="1.8" />
+      <module name="course-service" target="1.8" />
+      <module name="course-zuul" target="1.8" />
+      <module name="eurake-server" target="1.8" />
+      <module name="spring-cloud-course-practice" target="1.8" />
+      <module name="springcloud" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="course-list" options="-parameters" />
+      <module name="course-price" options="-parameters" />
+      <module name="course-zuul" options="-parameters" />
+      <module name="eurake-server" options="-parameters" />
+    </option>
+  </component>
+</project>

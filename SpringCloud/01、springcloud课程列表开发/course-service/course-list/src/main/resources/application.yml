@@ -1,0 +1,21 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/test?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+    username: root
+    password: 123456
+  application:
+    name: course-list   # 应用名
+
+server:
+  port: 8080
+
+# 指定注册的服务中心地址，一般与eureka-server中配置的对应，此时该服务启动就会将自己注册到服务中心
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8000/eureka/
+
+ribbon:
+  eureka:
+    enabled: true
