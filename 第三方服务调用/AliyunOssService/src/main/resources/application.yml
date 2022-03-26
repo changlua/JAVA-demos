@@ -1,0 +1,25 @@
+
+# 对象存储类型
+#objectstorage.type: oss
+#oss:
+#  endpoint: https://oss-cn-xhh.aliyuncs.com
+#  access-key-id: LTAI4GKXXXYuEzsXXXXyY63x
+#  access-key-secret: BXXXPwUVZr8XXXXjFMPjkw
+#  bucket-name: data
+#  root-directory: xhh/export/
+
+# 图片文件上传
+spring:
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 1000MB
+
+# 阿里云OSS配置
+aliyun:
+  oss:
+    endpoint:
+    accessKeyId:
+    accessKeySecret:
+    bucketName:   # 桶名称
+    key:     # 存储根路径

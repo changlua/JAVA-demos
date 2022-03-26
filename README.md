@@ -279,6 +279,18 @@ springcloud案例项目，详细内容见笔记：
 
 ![image-20211005133159873](https://pictured-bed.oss-cn-beijing.aliyuncs.com/img/beifen-gitee/2021/20211005133200.png)  
 
+---
+
+# 第三方服务调用
+
+## AliyunOssService
+
+目前已封装上传、删除接口。
+
+![image-20220326183758276](https://pictured-bed.oss-cn-beijing.aliyuncs.com/img/2022/3/202203261837315.png)  
+
+
+
 
 
 <br/>
