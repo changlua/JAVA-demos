@@ -8,7 +8,7 @@
 
 资源路径(当前目录)：`01、MyStaticServer`
 
-![image-20210517215450808](https://gitee.com/changluJava/picture-bed/raw/master/2021-5/20210517215451.png)  
+![image-20210517215450808](https://pictured-bed.oss-cn-beijing.aliyuncs.com/img/beifen-gitee/2021-5/20210517215451.png)  
 
 + `Server`：主类，用于启动服务器。
 + `MsgRunnable`：自定义线程类，用于处理接收到的请求。
@@ -27,11 +27,11 @@
 
 编译后需要在指定目录下添加pages目录，接着将html页面放入即可。
 
-![image-20210516095929265](https://gitee.com/changluJava/picture-bed/raw/master/2021-5/20210516095929.png)  
+![image-20210516095929265](https://pictured-bed.oss-cn-beijing.aliyuncs.com/img/beifen-gitee/2021-5/20210516095929.png)  
 
 **运行效果**：
 
-![image-20210516100018990](https://gitee.com/changluJava/picture-bed/raw/master/2021-5/20210516100019.png)  
+![image-20210516100018990](https://pictured-bed.oss-cn-beijing.aliyuncs.com/img/beifen-gitee/2021-5/20210516100019.png)  
 
 <br/>
 
@@ -45,13 +45,13 @@
 
 将打好的jar包放置到文件目录下，在当前目录中添加一个`pages`文件，其中添加静态资源即可！
 
-![image-20210516100548827](https://gitee.com/changluJava/picture-bed/raw/master/2021-5/20210516100548.png)  
+![image-20210516100548827](https://pictured-bed.oss-cn-beijing.aliyuncs.com/img/beifen-gitee/2021-5/20210516100548.png)  
 
 双击startup.bat即可启动服务器。
 
 测试效果：
 
-![image-20210516100837947](https://gitee.com/changluJava/picture-bed/raw/master/2021-5/20210516100838.png)  
+![image-20210516100837947](https://pictured-bed.oss-cn-beijing.aliyuncs.com/img/beifen-gitee/2021-5/20210516100838.png)  
 
 <br/>
 
@@ -65,7 +65,7 @@
 
 资源路径(当前目录)：`02、MyServlet`
 
-![image-20210517215929765](https://gitee.com/changluJava/picture-bed/raw/master/2021-5/20210517215930.png)  
+![image-20210517215929765](https://pictured-bed.oss-cn-beijing.aliyuncs.com/img/beifen-gitee/2021-5/20210517215930.png)  
 
 + `servlet`目录：包含一个servlet接口，实现接口的GenericServlet，继承GenericServlet的HttpServlet(封装了doGet()以及doPost()方法)。Request与Response是封装的请求与响应。
 + `controller`目录：包含多个servlet，用来封装业务。
@@ -95,13 +95,13 @@
 
 启动`catalina.java`
 
-![image-20210518090348538](https://gitee.com/changluJava/picture-bed/raw/master/2021-5/20210518090348.png)  
+![image-20210518090348538](https://pictured-bed.oss-cn-beijing.aliyuncs.com/img/beifen-gitee/2021-5/20210518090348.png)  
 
 **访问请求**：
 
-![image-20210518090437427](https://gitee.com/changluJava/picture-bed/raw/master/2021-5/20210518090437.png)  
+![image-20210518090437427](https://pictured-bed.oss-cn-beijing.aliyuncs.com/img/beifen-gitee/2021-5/20210518090437.png)  
 
-![image-20210518090450990](https://gitee.com/changluJava/picture-bed/raw/master/2021-5/20210518090451.png)  
+![image-20210518090450990](https://pictured-bed.oss-cn-beijing.aliyuncs.com/img/beifen-gitee/2021-5/20210518090451.png)  
 
 <br/>
 
@@ -113,7 +113,7 @@
 
 > 介绍
 
-![image-20210823231932982](https://gitee.com/changluJava/picture-bed/raw/master/2021-8/20210823231933.png)  
+![image-20210823231932982](https://pictured-bed.oss-cn-beijing.aliyuncs.com/img/beifen-gitee/2021-8/20210823231933.png)  
 
 **功能描述**：实现`Mybatis-spring`依赖中的@MapperScan功能，目的是将mybatis产生的代理类通过@MapperScan注入到Spring容器。
 
@@ -121,7 +121,7 @@
 
 **对应自己文档**：
 
-![image-20210823232350297](https://gitee.com/changluJava/picture-bed/raw/master/2021-8/20210823232350.png)  
+![image-20210823232350297](https://pictured-bed.oss-cn-beijing.aliyuncs.com/img/beifen-gitee/2021-8/20210823232350.png)  
 
 <br/>
 
@@ -129,7 +129,7 @@
 
 step1：导入sql文件
 
-![image-20210823223602776](https://gitee.com/changluJava/picture-bed/raw/master/2021-8/20210823223602.png)  
+![image-20210823223602776](https://pictured-bed.oss-cn-beijing.aliyuncs.com/img/beifen-gitee/2021-8/20210823223602.png)  
 
 ```sql
 DROP TABLE IF EXISTS `user`;
@@ -177,7 +177,7 @@ step2：运行项目即可！
 
 > 说明
 
-![image-20210920000541648](https://gitee.com/changluJava/picture-bed/raw/master/2021/20210920000541.png)  
+![image-20210920000541648](https://pictured-bed.oss-cn-beijing.aliyuncs.com/img/beifen-gitee/2021/20210920000541.png)  
 
 通过在数据库定义用户、角色、权限三个表来动态的添加账号用户权限到spring security。
 
@@ -185,7 +185,7 @@ step2：运行项目即可！
 
 **详细代码说明可见**：
 
-![image-20210920121758637](https://gitee.com/changluJava/picture-bed/raw/master/2021/20210920121758.png)  
+![image-20210920121758637](https://pictured-bed.oss-cn-beijing.aliyuncs.com/img/beifen-gitee/2021/20210920121758.png)  
 
 <br/>
 
@@ -201,9 +201,17 @@ step2：运行项目即可！
 
 **详细文档说明见**：
 
-![image-20210920122031553](https://gitee.com/changluJava/picture-bed/raw/master/2021/20210920122031.png)  
+![image-20210920122031553](https://pictured-bed.oss-cn-beijing.aliyuncs.com/img/beifen-gitee/2021/20210920122031.png)  
 
+## demo1-demo05
 
+> 位置
+
+![image-20220326095514153](https://pictured-bed.oss-cn-beijing.aliyuncs.com/img/2022/3/202203260955188.png)  
+
+文档见：各个项目demo描述见其中的README.md
+
+![image-20220326095555291](https://pictured-bed.oss-cn-beijing.aliyuncs.com/img/2022/3/202203260955329.png)  
 
 <br/>
 
@@ -213,14 +221,14 @@ step2：运行项目即可！
 
 > 01、02部分
 
-![image-20210925142756284](https://gitee.com/changluJava/picture-bed/raw/master/2021/20210925142756.png)  
+![image-20210925142756284](https://pictured-bed.oss-cn-beijing.aliyuncs.com/img/beifen-gitee/2021/20210925142756.png)  
 
 分别对应笔记
 
 + 01包含三个demo，如上图。
 + 02是springboot集成rabbitmq的案例，其中使用的是topic类型
 
-![image-20210925142836264](https://gitee.com/changluJava/picture-bed/raw/master/2021/20210925142902.png)  
+![image-20210925142836264](https://pictured-bed.oss-cn-beijing.aliyuncs.com/img/beifen-gitee/2021/20210925142902.png)  
 
 <br/>
 
@@ -269,7 +277,7 @@ step2：运行项目即可！
 
 springcloud案例项目，详细内容见笔记：
 
-![image-20211005133159873](https://gitee.com/changluJava/picture-bed/raw/master/2021/20211005133200.png)  
+![image-20211005133159873](https://pictured-bed.oss-cn-beijing.aliyuncs.com/img/beifen-gitee/2021/20211005133200.png)  
 
 
 

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+</head>
+<body>
+    <h1>用户登录</h1>
+    <form th:action="@{/bb}" method="post">
+        <input type="submit" value="注销">
+    </form>
+    <ul>
+        <!--    获取用户名、权限信息、账户是否过期、账户是否锁定、账户凭证是否过期    -->
+        <li sec:authentication="principal.username"></li>
+        <li sec:authentication="principal.authorities"></li>
+        <li sec:authentication="principal.accountNonExpired"></li>
+        <li sec:authentication="principal.accountNonLocked"></li>
+        <li sec:authentication="principal.credentialsNonExpired"></li>
+    </ul>
+</body>
+</html>

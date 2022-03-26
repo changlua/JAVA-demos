@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" native2AsciiForPropertiesFiles="true" defaultCharsetForPropertiesFiles="UTF-8">
+    <file url="file://$PROJECT_DIR$/SpringSecurityDemo03-split/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringSecurityDemo04-encrypt/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringSecurityDemo05-JWT/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringSecurityDemo1/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringSecurityDemo2/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringSecurityDemo3-web/src/main/java" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>

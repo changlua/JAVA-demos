@@ -1,0 +1,156 @@
+{
+	"info": {
+		"_postman_id": "b172a6ad-1dd8-4a24-b20c-e963331d2d82",
+		"name": "SpringSecurityDemo05-JWT",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "/logout：注销登录",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiI2ZDdhMjIyMDZiY2U0OTAwYjkzMmY2ZmUwZGFhZThiNiIsInN1YiI6IjEiLCJpc3MiOiJzZyIsImlhdCI6MTY0ODI1NjY2NiwiZXhwIjoxNjQ4MjYwMjY2fQ.ZtJeZY5vgt6RkWL_KUqKSGnkbSAuPPx7I-rqsCGyXhA",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8088/logout",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8088",
+					"path": [
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/hello：测试认证接口(不带token)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8088/hello",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8088",
+					"path": [
+						"hello"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/hello：测试认证接口(带token)",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiI4MWI2YjBhZ",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8088/hello",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8088",
+					"path": [
+						"hello"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/login：登录",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userName\": \"changlu\",\r\n    \"password\": \"123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8088/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8088",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/getUserInfo：获取用户信息",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiI2ZDdhMjIyMDZiY2U0OTAwYjkzMmY2ZmUwZGFhZThiNiIsInN1YiI6IjEiLCJpc3MiOiJzZyIsImlhdCI6MTY0ODI1NjY2NiwiZXhwIjoxNjQ4MjYwMjY2fQ.ZtJeZY5vgt6RkWL_KUqKSGnkbSAuPPx7I-rqsCGyXhA",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8088/getUserInfo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8088",
+					"path": [
+						"getUserInfo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/test：测试自定义权限校验方法",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiI2ZDdhMjIyMDZiY2U0OTAwYjkzMmY2ZmUwZGFhZThiNiIsInN1YiI6IjEiLCJpc3MiOiJzZyIsImlhdCI6MTY0ODI1NjY2NiwiZXhwIjoxNjQ4MjYwMjY2fQ.ZtJeZY5vgt6RkWL_KUqKSGnkbSAuPPx7I-rqsCGyXhA",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8088/test",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8088",
+					"path": [
+						"test"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

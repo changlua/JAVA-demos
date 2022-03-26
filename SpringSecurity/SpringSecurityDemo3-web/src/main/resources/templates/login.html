@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>登录页面</title>
+</head>
+<body>
+    <h2>用户登录</h2>
+    <form th:action="@{/doLogin}" method="post">
+        用户名：<input type="text" name="uname"><br/>
+        密码：<input type="text" name="passwd"><br/>
+        验证码：<input type="text" name="kaptcha"><image th:src="@{/getVerifyCode}"></image><br/>
+        <input type="submit" th:value="登录">
+    </form>
+    <h3>
+        <!--    登录失败时的异常信息（由于使用的是redirect，所以异常信息要从session中取出来）    -->
+        <div th:text="${session.SPRING_SECURITY_LAST_EXCEPTION}"></div>
+    </h3>
+</body>
+</html>
