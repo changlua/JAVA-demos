@@ -1,13 +1,3 @@
-
-# 对象存储类型
-#objectstorage.type: oss
-#oss:
-#  endpoint: https://oss-cn-xhh.aliyuncs.com
-#  access-key-id: LTAI4GKXXXYuEzsXXXXyY63x
-#  access-key-secret: BXXXPwUVZr8XXXXjFMPjkw
-#  bucket-name: data
-#  root-directory: xhh/export/
-
 # 图片文件上传
 spring:
   servlet:
