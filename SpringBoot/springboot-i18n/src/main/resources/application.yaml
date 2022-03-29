@@ -1,0 +1,10 @@
+server:
+  port: 8789
+
+spring:
+  # 资源信息，注意是messages
+  messages:
+    # 国家或资源文件路径
+    basename: i18n/messages
+    # 配置为true表示如果在message.properties中找不到key也不会抛出异常
+    use-code-as-default-message: true

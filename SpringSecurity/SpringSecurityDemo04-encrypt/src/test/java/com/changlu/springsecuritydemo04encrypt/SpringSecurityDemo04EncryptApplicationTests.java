@@ -15,6 +15,7 @@ class SpringSecurityDemo04EncryptApplicationTests {
         final BCryptPasswordEncoder bCryptPasswordEncoder = new BCryptPasswordEncoder();
         System.out.println(bCryptPasswordEncoder.encode("123"));
         System.out.println(bCryptPasswordEncoder.matches("123", "$2a$10$D2wuJaYJLwTdQrPKev7SuufhfRAr.DahZ.euMRjg3edKAp2p0qHUS"));
+        System.out.println(bCryptPasswordEncoder.matches("nacos", "$2a$10$EuWPZHzz32dJN7jexM34MOeYirDdFAZm2kuWj7VEOJhhZkDrxfvUu"));
     }
 
 }
