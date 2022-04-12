@@ -1,0 +1,22 @@
+server:
+  port: 8777
+
+spring:
+  # 数据源
+  datasource:
+    url: jdbc:mysql://localhost:3306/test?characterEncoding=utf-8&serverTimezone=UTC
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  # 文件上传
+  servlet:
+    multipart:
+      max-file-size: 20MB
+      max-request-size: 200MB
+
+#控制台打印sql(默认不会有打印sql语句)
+mybatis-plus:
+  mapper-locations: classpath*:com/changlu/mapper/*.xml  # 指定xml路径， classpath：表示只扫描当前模块下的mapper文件，classpath*即所有路径下
+  type-aliases-package: com.changlu.common.pojo  #指定实体类路径
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl

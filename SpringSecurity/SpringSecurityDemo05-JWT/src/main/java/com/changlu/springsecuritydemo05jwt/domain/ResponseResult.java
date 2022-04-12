@@ -30,6 +30,18 @@ public class ResponseResult<T> {
         this.data = data;
     }
 
+    public static <T> ResponseResult<T> success(String msg, T data){
+        return new ResponseResult<T>(200,msg,data);
+    }
+
+    public static <T> ResponseResult<T> success(T data){
+        return new ResponseResult<T>(200,data);
+    }
+
+    public static <T> ResponseResult<T> error(String msg){
+        return new ResponseResult<T>(500,msg,null);
+    }
+
     public Integer getCode() {
         return code;
     }

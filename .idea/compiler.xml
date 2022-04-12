@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="springboot-captcha" />
+        <module name="Springboot-excel" />
+        <module name="demo-exer" />
+        <module name="springboot" />
+        <module name="scheduledemo" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel target="8">
+      <module name="demo-exer" target="1.5" />
+      <module name="scheduledemo" target="1.8" />
+      <module name="SpringBoot" target="8" />
+      <module name="springboot" target="1.5" />
+      <module name="springboot-captcha" target="1.8" />
+      <module name="Springboot-excel" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Springboot-excel" options="-parameters" />
+      <module name="scheduledemo" options="-parameters" />
+      <module name="springboot-captcha" options="-parameters" />
+    </option>
+  </component>
+</project>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.changlu.web.mapper.ZfRaceMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.changlu.web.entity.ZfRaceModel">
+        <id column="race_id" property="raceId" />
+        <result column="race_name" property="raceName" />
+        <result column="race_members" property="raceMembers" />
+        <result column="race_begin_time" property="raceBeginTime" />
+        <result column="race_end_time" property="raceEndTime" />
+        <result column="race_flag" property="raceFlag" />
+        <result column="race_summarize" property="raceSummarize" />
+        <result column="create_time" property="createTime" />
+        <result column="update_time" property="updateTime" />
+        <result column="user_ids" property="userIds" />
+    </resultMap>
+
+</mapper>
