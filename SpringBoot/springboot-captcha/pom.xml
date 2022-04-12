@@ -33,12 +33,20 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- 1、easy-captcha  -->
+        <!-- 案例1、easy-captcha，对应easycaptcha目录案例  -->
         <dependency>
             <groupId>com.github.whvcse</groupId>
             <artifactId>easy-captcha</artifactId>
             <version>1.6.2</version>
         </dependency>
+
+        <!--  案例2：katpcha，对应kaptcha目录案例    -->
+        <dependency>
+            <groupId>com.github.penggle</groupId>
+            <artifactId>kaptcha</artifactId>
+            <version>2.3.2</version>
+        </dependency>
+
 
     </dependencies>
 
