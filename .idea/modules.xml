@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/SpringBoot/Springboot-excel/Springboot-excel.iml" filepath="$PROJECT_DIR$/SpringBoot/Springboot-excel/Springboot-excel.iml" />
+      <module fileurl="file://$PROJECT_DIR$/algorithm-java/algorithm-java.iml" filepath="$PROJECT_DIR$/algorithm-java/algorithm-java.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/demo-exer.iml" filepath="$PROJECT_DIR$/.idea/demo-exer.iml" />
-      <module fileurl="file://$PROJECT_DIR$/SpringBoot/springboot-schedule/scheduledemo.iml" filepath="$PROJECT_DIR$/SpringBoot/springboot-schedule/scheduledemo.iml" />
-      <module fileurl="file://$PROJECT_DIR$/SpringBoot/springboot.iml" filepath="$PROJECT_DIR$/SpringBoot/springboot.iml" />
-      <module fileurl="file://$PROJECT_DIR$/SpringBoot/springboot-captcha/springboot-captcha.iml" filepath="$PROJECT_DIR$/SpringBoot/springboot-captcha/springboot-captcha.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java-juc/java-juc.iml" filepath="$PROJECT_DIR$/java-juc/java-juc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java-jvm/java-jvm.iml" filepath="$PROJECT_DIR$/java-jvm/java-jvm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java-learn/java-learn.iml" filepath="$PROJECT_DIR$/java-learn/java-learn.iml" />
     </modules>
   </component>
 </project>
