@@ -55,7 +55,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/新建文件夹/personnel_management_system" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../苏职大/智峰工作室/工作室网站/项目/前后台项目/v0.2" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
@@ -154,7 +154,7 @@
       <option name="presentableId" value="Default" />
       <updated>1648865111573</updated>
       <workItem from="1648865112640" duration="11160000" />
-      <workItem from="1649607853263" duration="4046000" />
+      <workItem from="1649607853263" duration="11361000" />
     </task>
     <servers />
   </component>

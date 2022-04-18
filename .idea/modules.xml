@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/SpringBoot/Springboot-excel/Springboot-excel.iml" filepath="$PROJECT_DIR$/SpringBoot/Springboot-excel/Springboot-excel.iml" />
+      <module fileurl="file://$PROJECT_DIR$/algorithm-java/algorithm-java.iml" filepath="$PROJECT_DIR$/algorithm-java/algorithm-java.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/demo-exer.iml" filepath="$PROJECT_DIR$/.idea/demo-exer.iml" />
       <module fileurl="file://$PROJECT_DIR$/SpringBoot/springboot-schedule/scheduledemo.iml" filepath="$PROJECT_DIR$/SpringBoot/springboot-schedule/scheduledemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/SpringBoot/springboot.iml" filepath="$PROJECT_DIR$/SpringBoot/springboot.iml" />
