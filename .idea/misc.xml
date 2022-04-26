@@ -6,16 +6,13 @@
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
-        <option value="$PROJECT_DIR$/SpringBoot/pom.xml" />
-        <option value="$PROJECT_DIR$/SpringBoot/Springboot-excel/pom.xml" />
-        <option value="$PROJECT_DIR$/SpringBoot/springboot-schedule/pom.xml" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/SpringBoot/springboot-captcha/pom.xml" />
+        <option value="$PROJECT_DIR$/java-juc/pom.xml" />
         <option value="$PROJECT_DIR$/algorithm-java/pom.xml" />
       </list>
     </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="false" project-jdk-name="1.8" project-jdk-type="JavaSDK">
-    <output url="file://$PROJECT_DIR$/SpringBoot/Springboot-excel/out" />
+    <output url="file://$PROJECT_DIR$/java-learn/out" />
   </component>
 </project>
