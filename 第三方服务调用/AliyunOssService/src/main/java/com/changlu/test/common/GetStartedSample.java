@@ -16,29 +16,29 @@ import com.aliyun.oss.OSSException;
 import com.aliyun.oss.model.*;
 
 /**
- * This sample demonstrates how to get started with basic requests to Aliyun OSS 
+ * This sample demonstrates how to get started with basic requests to Aliyun OSS
  * using the OSS SDK for Java.
  */
 public class GetStartedSample {
-    
-    private static String endpoint = "http://oss-cn-beijing.aliyuncs.com";
-    private static String accessKeyId = "LTAI5tP8dKzxm3kDPqTUQboJ";
-    private static String accessKeySecret = "UU3yATawFsOEtDgMhhktlum8SqPt70";
+
+    private static String endpoint = "";
+    private static String accessKeyId = "";
+    private static String accessKeySecret = "";
 //    private static String bucketName = "pictured-bed";
-    private static String bucketName = "pictured-bedtest";
+    private static String bucketName = "";
     private static String key = "test/test2/";//若是目录，一定要设置/
 
     //方便之后拼接
-    private static String shortEndpoint = "oss-cn-beijing.aliyuncs.com";
-    
+    private static String shortEndpoint = "";
+
     public static void main(String[] args) throws IOException {
         /*
          * Constructs a client instance with your account for accessing OSS
          */
         OSS ossClient = new OSSClientBuilder().build(endpoint, accessKeyId, accessKeySecret);
-        
+
         System.out.println("Getting Started with OSS SDK for Java\n");
-        
+
         try {
 
 //            /*
@@ -123,7 +123,7 @@ public class GetStartedSample {
 //            System.out.println();
 //
 
-            
+
         } catch (OSSException oe) {
             System.out.println("Caught an OSSException, which means your request made it to OSS, "
                     + "but was rejected with an error response for some reason.");
@@ -143,7 +143,7 @@ public class GetStartedSample {
             ossClient.shutdown();
         }
     }
-    
+
     private static File createSampleFile() throws IOException {
         File file = File.createTempFile("oss-java-sdk-", ".txt");
         file.deleteOnExit();
@@ -165,7 +165,7 @@ public class GetStartedSample {
             System.out.println("    " + line);
         }
         System.out.println();
-        
+
         reader.close();
     }
 
