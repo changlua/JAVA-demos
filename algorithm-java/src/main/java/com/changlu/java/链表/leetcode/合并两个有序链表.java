@@ -1,5 +1,7 @@
 package com.changlu.java.链表.leetcode;
 
+import com.changlu.java.链表.ListNode;
+
 /**
  * @ClassName 合并两个有序链表 【简单】
  * @Author ChangLu

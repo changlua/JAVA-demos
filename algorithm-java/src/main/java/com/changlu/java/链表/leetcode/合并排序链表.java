@@ -1,6 +1,7 @@
 package com.changlu.java.链表.leetcode;
 
-import java.util.Comparator;
+import com.changlu.java.链表.ListNode;
+
 import java.util.PriorityQueue;
 
 /**

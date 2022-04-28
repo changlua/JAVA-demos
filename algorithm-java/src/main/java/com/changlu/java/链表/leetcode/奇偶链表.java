@@ -1,5 +1,7 @@
 package com.changlu.java.链表.leetcode;
 
+import com.changlu.java.链表.ListNode;
+
 /**
  * @ClassName 奇偶链表【中等】
  * @Author ChangLu

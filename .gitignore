@@ -2,6 +2,11 @@
 
 手写系列/01、MyStaticServer/.gitignore
 
+# 23种设计模式
+java-Lear23designpatterns/.idea/
+java-Lear23designpatterns/target/
+java-Lear23designpatterns/*.iml
+
 # algorithm-java
 algorithm-java/.idea/
 algorithm-java/target/

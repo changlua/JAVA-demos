@@ -1,7 +1,8 @@
 package com.changlu.java.链表.leetcode;
 
+import com.changlu.java.链表.ListNode;
+
 import java.io.File;
-import java.util.List;
 
 /**
  * @ClassName K个一组翻转链表【困难】
