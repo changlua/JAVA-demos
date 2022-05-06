@@ -7,13 +7,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="java-juc" />
         <module name="algorithm-java" />
+        <module name="java-juc" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="8">
+    <bytecodeTargetLevel>
       <module name="algorithm-java" target="8" />
-      <module name="demo-exer" target="8" />
       <module name="java-juc" target="1.5" />
     </bytecodeTargetLevel>
   </component>
