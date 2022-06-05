@@ -9,7 +9,21 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/java-juc/pom.xml" />
         <option value="$PROJECT_DIR$/algorithm-java/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringBoot/pom.xml" />
+        <option value="$PROJECT_DIR$/RPC-Dubbo/pom.xml" />
+        <option value="$PROJECT_DIR$/RPC-Dubbo/dubbo-web/pom.xml" />
+        <option value="$PROJECT_DIR$/Rpc-Dubbo/pom.xml" />
+        <option value="$PROJECT_DIR$/Rpc-Dubbo/Rpc-web/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot-rpc-dubbo/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot-rpc-dubbo/dubbo-provider/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot-rpc-dubbo/dubbo-customer/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot-rpc-dubbo/dubbo-api/pom.xml" />
       </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/RPC-Dubbo/dubbo-web/pom.xml" />
+      </set>
     </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="false" project-jdk-name="1.8" project-jdk-type="JavaSDK">

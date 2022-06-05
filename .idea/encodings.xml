@@ -4,6 +4,8 @@
     <file url="file://$PROJECT_DIR$/SpringBoot/Springboot-excel/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/SpringBoot/springboot-captcha/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/SpringBoot/springboot-schedule/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboot-rpc-dubbo/dubbo-customer/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboot-rpc-dubbo/dubbo-provider/src/main/java" charset="UTF-8" />
     <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>

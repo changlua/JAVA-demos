@@ -1,3 +1,12 @@
+
+# 公共
+.idea/
+*.iml
+*.ipr
+*.iws
+target/
+out/
+
 #项目目录下内容
 
 手写系列/01、MyStaticServer/.gitignore
