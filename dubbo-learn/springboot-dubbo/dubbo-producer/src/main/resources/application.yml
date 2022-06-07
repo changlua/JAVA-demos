@@ -1,0 +1,26 @@
+# 手动指定版本号，分别表示：大版本.中版本.小版本。【大版本一般以年为单位，中版本一般是指某个功能大的迭代，小版本则是小功能的升级】
+demo:
+  service:
+    version: 1.0.0
+
+server:
+  port: 8801
+
+spring:
+  application:
+    name: producer
+
+dubbo:
+  # 协议
+  protocol:
+    name: dubbo
+    port: -1
+  # 注册配置
+  registry:
+    # 注册地址
+    address: zookeeper://192.168.10.40:2181
+    # 缓存信息
+    file: C:\Users\93997\Desktop\upload\/dubbo-cache\${spring.application.name}\dubbo.cache
+  # 扫描指定的service包
+  scan:
+    base-packages: com.changlu.service
