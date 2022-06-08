@@ -1,7 +1,6 @@
 package com.changlu.client;
 
-import com.changlu.common.RPCRequest;
-import com.changlu.common.RPCResponse;
+import com.changlu.common.RPCRequestMessage;
 import com.google.gson.Gson;
 import com.google.gson.internal.LinkedTreeMap;
 import lombok.AllArgsConstructor;
@@ -27,7 +26,7 @@ public class RPCClientProxy implements InvocationHandler {
 
     @Override
     public Object invoke(Object proxy, Method method, Object[] args){
-        RPCRequest request = RPCRequest.builder()
+        RPCRequestMessage request = RPCRequestMessage.builder()
                 .interfaceName(method.getDeclaringClass().getName())
                 .methodName(method.getName())
                 .paramsType(method.getParameterTypes())

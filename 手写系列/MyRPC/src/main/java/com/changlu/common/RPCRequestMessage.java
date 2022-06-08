@@ -12,7 +12,7 @@ import lombok.Data;
  */
 @Data
 @Builder
-public class RPCRequest extends Message {
+public class RPCRequestMessage extends Message {
 
     private String interfaceName;
 

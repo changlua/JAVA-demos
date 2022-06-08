@@ -23,10 +23,12 @@ public abstract class Message implements Serializable {
     //消息标识
     public static final int RPC_MESSAGE_TYPE_REQUEST = 101;
     public static final int RPC_MESSAGE_TYPE_RESPONSE = 102;
+    public static final int PING_MESSAGE_REQUEST = 103;//心跳消息
 
     static {
-        messageClasses.put(RPC_MESSAGE_TYPE_REQUEST, RPCRequest.class);
-        messageClasses.put(RPC_MESSAGE_TYPE_RESPONSE, RPCResponse.class);
+        messageClasses.put(RPC_MESSAGE_TYPE_REQUEST, RPCRequestMessage.class);
+        messageClasses.put(RPC_MESSAGE_TYPE_RESPONSE, RPCResponseMessage.class);
+        messageClasses.put(PING_MESSAGE_REQUEST, PingMessage.class);
     }
 
     public abstract int getMessageType();

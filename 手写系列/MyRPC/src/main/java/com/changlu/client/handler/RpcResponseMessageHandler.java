@@ -1,9 +1,8 @@
 package com.changlu.client.handler;
 
-import com.changlu.common.RPCResponse;
+import com.changlu.common.RPCResponseMessage;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
-import io.netty.util.AttributeKey;
 import io.netty.util.concurrent.Promise;
 
 import java.util.Map;
@@ -15,7 +14,7 @@ import java.util.concurrent.ConcurrentHashMap;
  * @Date 5/31/2022 6:00 PM
  * @Description 客户端RPCRequest处理器
  */
-public class RpcResponseMessageHandler extends SimpleChannelInboundHandler<RPCResponse> {
+public class RpcResponseMessageHandler extends SimpleChannelInboundHandler<RPCResponseMessage> {
 
     /**
      * 临时存储对应唯一id的promise
@@ -23,16 +22,14 @@ public class RpcResponseMessageHandler extends SimpleChannelInboundHandler<RPCRe
     public static Map<Integer, Promise> promiseMap = new ConcurrentHashMap<>();
 
     @Override
-    protected void channelRead0(ChannelHandlerContext ctx, RPCResponse rpcResponse){
-        Object value = rpcResponse.getReturnValue();
-        Exception ex = rpcResponse.getExceptionValue();
-        Promise promise = promiseMap.remove(rpcResponse.getSeqId());
+    protected void channelRead0(ChannelHandlerContext ctx, RPCResponseMessage rpcResponseMessage){
+        Object value = rpcResponseMessage.getReturnValue();
+        Exception ex = rpcResponseMessage.getExceptionValue();
+        Promise promise = promiseMap.remove(rpcResponseMessage.getSeqId());
         if (ex != null ) {
             promise.setFailure(ex);
         }
         promise.setSuccess(value);
-        //关闭对应的channel
-//        ctx.channel().close();
     }
 
     @Override

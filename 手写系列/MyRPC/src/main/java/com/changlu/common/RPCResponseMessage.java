@@ -1,6 +1,5 @@
 package com.changlu.common;
 
-import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -13,22 +12,22 @@ import lombok.NoArgsConstructor;
  */
 @Data
 @NoArgsConstructor
-public class RPCResponse extends Message {
+public class RPCResponseMessage extends Message {
 
     private Object returnValue;
 
     private Exception exceptionValue;
 
-    public static RPCResponse fail(int seqId, Exception e) {
-         RPCResponse response = new RPCResponse();
+    public static RPCResponseMessage fail(int seqId, Exception e) {
+         RPCResponseMessage response = new RPCResponseMessage();
          //重新封装好异常信息后返回
          response.setExceptionValue(new Exception(e.getCause().getMessage()));
          response.setSeqId(seqId);
          return response;
     }
 
-    public static RPCResponse success(int seqId, Object val) {
-        RPCResponse response = new RPCResponse();
+    public static RPCResponseMessage success(int seqId, Object val) {
+        RPCResponseMessage response = new RPCResponseMessage();
         response.setReturnValue(val);
         response.setSeqId(seqId);
         return response;

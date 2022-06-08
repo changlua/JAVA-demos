@@ -26,6 +26,11 @@ public class MyRPCClient {
         } catch (Exception e) {
             e.printStackTrace();
         }
+        try {
+            Thread.sleep(10 * 1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         //2、调用博客业务类
         try {
             BlogService blogService = rpcClientProxy.getRPCProxy(BlogService.class);

@@ -1,8 +1,7 @@
 package com.changlu.client;
 
 
-import com.changlu.common.RPCRequest;
-import com.changlu.common.RPCResponse;
+import com.changlu.common.RPCRequestMessage;
 
 /**
  * @ClassName RPCClient
@@ -12,6 +11,6 @@ import com.changlu.common.RPCResponse;
  */
 public interface RPCClient {
 
-    Object sendRequest(RPCRequest request);
+    Object sendRequest(RPCRequestMessage request);
 
 }

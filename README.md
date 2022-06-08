@@ -1,6 +1,64 @@
 # 手写系列
 
-## 01、MyStaticServer(手写静态服务器简单实现)
+## Mybatis(Mybatis源码手写相关)
+
+### 03-1、Mybatis-spring
+
+> 介绍
+
+![image-20210823231932982](https://pictured-bed.oss-cn-beijing.aliyuncs.com/img/beifen-gitee/2021-8/20210823231933.png)  
+
+**功能描述**：实现`Mybatis-spring`依赖中的@MapperScan功能，目的是将mybatis产生的代理类通过@MapperScan注入到Spring容器。
+
+**参考视频**：[这可能是B站讲的最好的SPRING源码教程（2021年最新版）](https://www.bilibili.com/video/BV1dK4y127mH)中的36-40集，介绍了mybatis的代理类如何生成以及注入代理类到Spring容器！
+
+**对应自己文档**：
+
+![image-20210823232350297](https://pictured-bed.oss-cn-beijing.aliyuncs.com/img/beifen-gitee/2021-8/20210823232350.png)  
+
+<br/>
+
+> 运行项目
+
+step1：导入sql文件
+
+![image-20210823223602776](https://pictured-bed.oss-cn-beijing.aliyuncs.com/img/beifen-gitee/2021-8/20210823223602.png)  
+
+```sql
+DROP TABLE IF EXISTS `user`;
+CREATE TABLE `user`  (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '主键ID',
+  `last_name` varchar(30) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '姓名',
+  `age` int(11) NULL DEFAULT NULL COMMENT '年龄',
+  `email` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '邮箱',
+  `deleted` int(1) NULL DEFAULT 1 COMMENT '逻辑删除\r\n',
+  `gmt_create` datetime(0) NULL DEFAULT NULL COMMENT '创建日期',
+  `gmt_modified` datetime(0) NULL DEFAULT NULL COMMENT '修改日期',
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 1428384446647291906 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of user
+-- ----------------------------
+INSERT INTO `user` VALUES (1, 'changlu', 22, '368', 1, NULL, '2021-08-19 00:26:56');
+INSERT INTO `user` VALUES (2, 'Tom', 28, 'test3@baomidou.com', 1, NULL, '2021-08-19 00:26:56');
+INSERT INTO `user` VALUES (3, 'Billie', 23, 'test5@baomidou.com', 1, NULL, '2021-08-19 00:27:25');
+INSERT INTO `user` VALUES (4, 'xiaoli', 11, '86578954@qq.com', 1, NULL, '2021-08-19 00:26:56');
+INSERT INTO `user` VALUES (1428010279540023298, 'xiaotian', 18, '86547528@qq.com', 0, NULL, '2021-08-19 00:26:56');
+INSERT INTO `user` VALUES (1428037780849168385, 'mining', 28, '86547528@qq.com', 1, '2021-08-19 00:55:13', '2021-08-19 00:55:37');
+INSERT INTO `user` VALUES (1428384446647291905, 'xiaomei', 20, '86547528@qq.com', 1, '2021-08-19 23:52:45', '2021-08-19 23:52:45');
+
+SET FOREIGN_KEY_CHECKS = 1;
+​```
+```
+
+step2：运行项目即可！
+
+---
+
+## MyRPC(手写RPC框架案例)
+
+## MyStaticServer(手写静态服务器简单实现)
 
 ### 介绍
 
@@ -57,7 +115,7 @@
 
 ---
 
-## 02、MyServet(手写Tomcat中的Servlet容器)
+## MyServet(手写Tomcat中的Servlet容器)
 
 ### 介绍
 
@@ -79,7 +137,7 @@
 
 ---
 
-## 测试服务器
+### 测试服务器
 
 配置文件`web.properties`：存储了对应的请求地址与servlet的关系
 
@@ -130,59 +188,6 @@
 +   xyz.changlu.template：模板方法模式
 
 
-# Mybatis(Mybatis源码手写相关)
-
-## 03-1、Mybatis-spring
-
-> 介绍
-
-![image-20210823231932982](https://pictured-bed.oss-cn-beijing.aliyuncs.com/img/beifen-gitee/2021-8/20210823231933.png)  
-
-**功能描述**：实现`Mybatis-spring`依赖中的@MapperScan功能，目的是将mybatis产生的代理类通过@MapperScan注入到Spring容器。
-
-**参考视频**：[这可能是B站讲的最好的SPRING源码教程（2021年最新版）](https://www.bilibili.com/video/BV1dK4y127mH)中的36-40集，介绍了mybatis的代理类如何生成以及注入代理类到Spring容器！
-
-**对应自己文档**：
-
-![image-20210823232350297](https://pictured-bed.oss-cn-beijing.aliyuncs.com/img/beifen-gitee/2021-8/20210823232350.png)  
-
-<br/>
-
-> 运行项目
-
-step1：导入sql文件
-
-![image-20210823223602776](https://pictured-bed.oss-cn-beijing.aliyuncs.com/img/beifen-gitee/2021-8/20210823223602.png)  
-
-```sql
-DROP TABLE IF EXISTS `user`;
-CREATE TABLE `user`  (
-  `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '主键ID',
-  `last_name` varchar(30) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '姓名',
-  `age` int(11) NULL DEFAULT NULL COMMENT '年龄',
-  `email` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '邮箱',
-  `deleted` int(1) NULL DEFAULT 1 COMMENT '逻辑删除\r\n',
-  `gmt_create` datetime(0) NULL DEFAULT NULL COMMENT '创建日期',
-  `gmt_modified` datetime(0) NULL DEFAULT NULL COMMENT '修改日期',
-  PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 1428384446647291906 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
-
--- ----------------------------
--- Records of user
--- ----------------------------
-INSERT INTO `user` VALUES (1, 'changlu', 22, '368', 1, NULL, '2021-08-19 00:26:56');
-INSERT INTO `user` VALUES (2, 'Tom', 28, 'test3@baomidou.com', 1, NULL, '2021-08-19 00:26:56');
-INSERT INTO `user` VALUES (3, 'Billie', 23, 'test5@baomidou.com', 1, NULL, '2021-08-19 00:27:25');
-INSERT INTO `user` VALUES (4, 'xiaoli', 11, '86578954@qq.com', 1, NULL, '2021-08-19 00:26:56');
-INSERT INTO `user` VALUES (1428010279540023298, 'xiaotian', 18, '86547528@qq.com', 0, NULL, '2021-08-19 00:26:56');
-INSERT INTO `user` VALUES (1428037780849168385, 'mining', 28, '86547528@qq.com', 1, '2021-08-19 00:55:13', '2021-08-19 00:55:37');
-INSERT INTO `user` VALUES (1428384446647291905, 'xiaomei', 20, '86547528@qq.com', 1, '2021-08-19 23:52:45', '2021-08-19 23:52:45');
-
-SET FOREIGN_KEY_CHECKS = 1;
-​```
-```
-
-step2：运行项目即可！
 
 <br/>
 
@@ -301,6 +306,10 @@ step2：运行项目即可！
 springcloud案例项目，详细内容见笔记：
 
 ![image-20211005133159873](https://pictured-bed.oss-cn-beijing.aliyuncs.com/img/beifen-gitee/2021/20211005133200.png)  
+
+# dubbo-learn
+
+`springboot-dubbo`：dubbo+zookeeper，对应博客：
 
 ---
 

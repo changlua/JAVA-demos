@@ -1,13 +1,12 @@
 package com.changlu.server.handler;
 
-import com.changlu.common.RPCRequest;
-import com.changlu.common.RPCResponse;
+import com.changlu.common.RPCRequestMessage;
+import com.changlu.common.RPCResponseMessage;
 import com.changlu.server.netty.ServiceProvider;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
 import lombok.AllArgsConstructor;
 
-import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
 /**
@@ -17,15 +16,15 @@ import java.lang.reflect.Method;
  * @Description 处理RPC调用的专用处理器
  */
 @AllArgsConstructor
-public class RpcRequestMessageHandler extends SimpleChannelInboundHandler<RPCRequest> {
+public class RpcRequestMessageHandler extends SimpleChannelInboundHandler<RPCRequestMessage> {
 
     private ServiceProvider serviceProvider;
 
     @Override
-    protected void channelRead0(ChannelHandlerContext ctx, RPCRequest rpcRequest) throws Exception {
-        RPCResponse response = getResponse(rpcRequest);
+    protected void channelRead0(ChannelHandlerContext ctx, RPCRequestMessage rpcRequestMessage) throws Exception {
+        RPCResponseMessage response = getResponse(rpcRequestMessage);
         ctx.channel().writeAndFlush(response);
-        ctx.close();
+//        ctx.close();
     }
 
     @Override
@@ -34,7 +33,7 @@ public class RpcRequestMessageHandler extends SimpleChannelInboundHandler<RPCReq
         ctx.close();
     }
 
-    private RPCResponse getResponse(RPCRequest request) {
+    private RPCResponseMessage getResponse(RPCRequestMessage request) {
         //1、得到服务名
         final String interfaceName = request.getInterfaceName();
         //2、从当前服务中获取到相应的接口实例
@@ -44,10 +43,10 @@ public class RpcRequestMessageHandler extends SimpleChannelInboundHandler<RPCReq
             //注意：获取到某个方法需要相应的方法名以及参数类型数组
             Method method = service.getClass().getMethod(request.getMethodName(), request.getParamsType());
             Object data = method.invoke(service, request.getParams());
-            return RPCResponse.success(request.getSeqId(), data);
+            return RPCResponseMessage.success(request.getSeqId(), data);
         } catch (Exception e) {
             e.printStackTrace();
-            return RPCResponse.fail(request.getSeqId(), e);
+            return RPCResponseMessage.fail(request.getSeqId(), e);
         }
     }
 
