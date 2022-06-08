@@ -40,15 +40,46 @@ RPC过程：客户端【获取代理类执行方法(调用接口方法) -> 执�
 
 
 
+# 使用方式
+
+## 可配置项
+
+1、当前仅有序列化配置：
+
+![image-20220608163218591](https://pictured-bed.oss-cn-beijing.aliyuncs.com/img/2022/6/202206081632647.png)  
+
+## 前提准备
+
+使用Docker来快速安装Zookeeper配置中心，可见博客：[01、认识Zookeeper与Win和Linux安装，看其中的linux安装部分](https://changlu.blog.csdn.net/article/details/125168328)
+
+记得关闭防火墙。
+
+## 使用方式
+
+1、修改Zookeeper的一个对应地址：
+
+![image-20220608163105628](https://pictured-bed.oss-cn-beijing.aliyuncs.com/img/2022/6/202206081631749.png)  
+
+2、首先启动服务提供者来进行服务注册
+
+启动server/Main.java即可启动，若是出现rpc注册成功则没有问题：
+
+![image-20220608163312754](https://pictured-bed.oss-cn-beijing.aliyuncs.com/img/2022/6/202206081633885.png)  
+
+看下虚拟机：
+
+![image-20220608163458540](https://pictured-bed.oss-cn-beijing.aliyuncs.com/img/2022/6/202206081634576.png)  
+
+3、运行客户端来进行RPC调用
+
+![image-20220608163601627](https://pictured-bed.oss-cn-beijing.aliyuncs.com/img/2022/6/202206081636719.png)  
+
+![image-20220608163734679](https://pictured-bed.oss-cn-beijing.aliyuncs.com/img/2022/6/202206081637737.png)  
+
+
+
+
+
 ---
 
 整理者：长路  时间：2022.6.8
-
-
-
-
-
-
-
-
-

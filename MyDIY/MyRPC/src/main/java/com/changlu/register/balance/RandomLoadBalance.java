@@ -14,7 +14,7 @@ public class RandomLoadBalance implements LoadBalance{
     public String balance(List<String> addressList) {
         Random random = new Random();
         int choose = random.nextInt(addressList.size());
-        System.out.println(String.format("进行负载均衡策略选择：总共有%s台，选择了第%s台", addressList.size(), choose));
+        System.out.println(String.format("进行负载均衡策略选择：总共有%s台，选择了第%s台", addressList.size(), choose + 1));
         return addressList.get(choose);
     }
 }

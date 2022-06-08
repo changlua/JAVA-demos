@@ -58,6 +58,8 @@ step2：运行项目即可！
 
 ## MyRPC(手写RPC框架案例)
 
+详细说明可进入到对应目录README.MD：[Gitee](https://gitee.com/changluJava/demo-exer/tree/master/MyDIY/MyRPC)、[Github](https://github.com/changlua/JAVA-demos/tree/master/MyDIY/MyRPC)
+
 ## MyStaticServer(手写静态服务器简单实现)
 
 ### 介绍

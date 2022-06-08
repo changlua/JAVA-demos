@@ -19,7 +19,7 @@ public class MyRPCClient {
                 new NettyRPCClient(new RoundLoadBalance())//选择指定的策略
         );//不指定IP地址及端口号，就通过使用服务发现来获取ip地址
         try {
-            //1、调用用户业务类
+            //测试一：调用用户业务类
             UserService userService = rpcClientProxy.getRPCProxy(UserService.class);
             System.out.println(userService.getUserByUserId(123));
             //测试心跳检测
@@ -28,7 +28,7 @@ public class MyRPCClient {
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-            //2、调用博客业务类
+            //测试二：调用博客业务类
             BlogService blogService = rpcClientProxy.getRPCProxy(BlogService.class);
             System.out.println(blogService.getBlogById(123));
         } catch (Exception e) {

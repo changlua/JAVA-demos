@@ -17,7 +17,7 @@ public class RoundLoadBalance implements LoadBalance{
     public String balance(List<String> addressList) {
         int choose = count.getAndDecrement();//获取到最新的值
         choose = choose % addressList.size();
-        System.out.println(String.format("进行负载均衡策略选择：总共有%s台，选择了第%s台", addressList.size(), choose));
+        System.out.println(String.format("进行负载均衡策略选择：总共有%s台，选择了第%s台", addressList.size(), choose + 1));
         return addressList.get(choose);
     }
 }
