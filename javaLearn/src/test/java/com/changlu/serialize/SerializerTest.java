@@ -24,6 +24,10 @@ public class SerializerTest {
         testSerialize(new JdkSerializer(), rpcResponse);
         //测试ProtoBuf
         testProtobufSerialzize();
+        //测试ProtoStuff
+        testSerialize(new ProtoStuffSerializer(), rpcResponse);
+        //测试Hession
+        testSerialize(new HessianSerializer(), rpcResponse);
     }
 
 
