@@ -1,0 +1,12 @@
+syntax = "proto3";
+ option java_package = "com.changlu.serialize.protobuf";
+ option java_outer_classname = "DemoModel";
+
+ message User {
+ 	string name = 1;
+ 	uint32 age = 2;
+ }
+
+ message Message {
+ 	uint32 message_type = 1;
+ }

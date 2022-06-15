@@ -20,7 +20,7 @@ import java.io.IOException;
  */
 public class KryoSerializer implements Serializer{
 
-    //由于Kryo是线程不安全的，所以我们这里使用ThreadLocal来解决线程安全问题
+    // 由于Kryo是线程不安全的，所以我们这里使用ThreadLocal来解决线程安全问题
     public static ThreadLocal<Kryo> kryoThreadLocal = ThreadLocal.withInitial(()->{
             Kryo kryo = new Kryo();
             kryo.setReferences(true);//检测循环依赖，默认值为true，避免版本变化显示设置
