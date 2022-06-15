@@ -31,11 +31,13 @@ public interface Serializer {
     static Serializer getSerializerByType(byte type){
         switch (type) {
             case 0:
-                return SerializerAlgorithm.Java;
+                return SerializerAlgorithm.JDK;
             case 1:
                 return SerializerAlgorithm.Json;
+            case 2:
+                return KryoSerializer.getInstance();
             default:
-                return SerializerAlgorithm.Java;
+                return SerializerAlgorithm.JDK;
         }
     }
 }

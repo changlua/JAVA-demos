@@ -18,7 +18,7 @@ import java.util.List;
  * @Description 序列化实现类
  */
 public enum SerializerAlgorithm implements Serializer {
-    Java{
+    JDK{
         @Override
         public <T> T deserialize(Class<T> clazz, byte[] bytes) {
             T obj;

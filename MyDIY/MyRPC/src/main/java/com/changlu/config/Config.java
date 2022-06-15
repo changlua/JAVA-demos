@@ -17,7 +17,7 @@ public class Config {
     static {
         Properties properties = new Properties();
         try {
-            properties.load(new FileInputStream("E:\\自学历程\\Gitee仓库\\demo-exer\\手写系列\\MyRPC\\src\\main\\resources\\application.properties"));
+            properties.load(new FileInputStream("E:\\自学历程\\Gitee仓库\\demo-exer\\MyDIY\\MyRPC\\src\\main\\resources\\application.properties"));
             serializerType = Byte.valueOf(properties.getProperty("serializerType"));
         } catch (IOException e) {
             e.printStackTrace();
