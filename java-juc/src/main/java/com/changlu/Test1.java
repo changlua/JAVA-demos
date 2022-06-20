@@ -15,7 +15,7 @@ abstract class CircleBB{
     abstract void draw();
 }
 
-class Circle extends cir{
+class Circle extends CircleBB{
     public void draw() {
         //System.out.println("circle");
     }

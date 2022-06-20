@@ -8,17 +8,19 @@ package com.changlu.ClassDemo;
  * @Description TODO
  */
 public class Test {
-    public static void main(String[] args) {
-        System.out.println(new Test().test());
-    }
 
-    public int test(){
-        try {
-            int i = 1/0;
-        }catch (Exception e) {
-            return 1;
-        }finally {
-            return 0;
+    public static void main(String[] args) {
+        for (int i = 0; i < 100; i++) {
+            System.out.println("666");
         }
+    }
+}
+
+class MyClassLoader extends ClassLoader {
+
+    @Override
+    public Class<?> loadClass(String name) throws ClassNotFoundException {
+//        defineClass();
+        return super.loadClass(name);
     }
 }

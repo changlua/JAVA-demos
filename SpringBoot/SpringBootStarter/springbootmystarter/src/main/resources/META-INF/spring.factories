@@ -1,0 +1,3 @@
+# 表示自动配置需要读取的class类
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+com.changlu.config.CustomConfigurationClass
