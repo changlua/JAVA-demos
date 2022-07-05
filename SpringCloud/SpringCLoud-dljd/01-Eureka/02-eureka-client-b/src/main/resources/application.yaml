@@ -1,0 +1,16 @@
+server:
+  port: 8081 # 客户端的端口没有要求
+spring:
+  application:
+    name: eureka-client-b
+
+# 注册的含义是什么? 就是将自己的一些信息(什么信息ip port...) 发送过去 (发到哪里)
+eureka:
+  client:  # 客户端的相关配置
+    service-url:  # 指定注册的地址
+      defaultZone: http://localhost:8761/eureka
+  instance:
+    hostname: localhost # 应用的主机名称 最好写主机ip
+    instance-id: ${eureka.instance.hostname}:${spring.application.name}:${server.port}
+    prefer-ip-address: true # 显示ip
+    lease-renewal-interval-in-seconds: 10 # 示例续约的时间

@@ -1,0 +1,19 @@
+# 集群
+server:
+  port: 8763  # eureka的默认端口  6379  8080  3306   8848
+spring:
+  application:
+    name: eureka-server  # 应用名称 不要使用特殊字符
+eureka:
+  server:
+    eviction-interval-timer-in-ms: 90000 #清除无效节点的评率(毫秒)
+  client:
+    service-url: # 你不写 默认 8761
+      defaultZone: http://changlu1:8761/eureka,http://changlu2:8762/eureka
+    fetch-registry: true  #是否拉取服务列表
+    register-with-eureka: true  #是否注册自己（集群需要注册自己和拉取服务）
+  instance: # 实例的配置
+    instance-id: ${eureka.instance.hostname}:${spring.application.name}:${server.port}   # 主机名称 : 应用名称 : 端口号
+    hostname: changlu3  # 主机名称 或者服务的ip
+    prefer-ip-address: true # 以ip的形式显示具体的服务信息
+    lease-renewal-interval-in-seconds: 5  # 服务实例的续约的时间间隔
