@@ -1,0 +1,17 @@
+server:
+  port: 8082
+spring:
+  application:
+    name: user-service
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+  instance:
+    hostname: localhost
+    instance-id: ${eureka.instance.hostname}:${spring.application.name}:${server.port}
+
+# 开启熔断
+feign:
+  hystrix:
+    enabled: true

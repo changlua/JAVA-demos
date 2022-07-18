@@ -15,6 +15,7 @@ public class Test {
     public static void main(String[] args) {
         Test test = new Test();
         System.out.println(test.solve("(2*(3-4))*5"));
+        StringBuilder builder = new StringBuilder();
     }
 
     // 使用 map 维护一个运算符优先级（其中加减法优先级相同，乘法有着更高的优先级）
