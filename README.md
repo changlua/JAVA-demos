@@ -1,3 +1,7 @@
+[toc]
+
+
+
 # MyDIY（手写系列）
 
 ## Mybatis(Mybatis源码手写相关)
@@ -166,6 +170,28 @@ step2：运行项目即可！
 <br/>
 
 ---
+
+## SpringCloud（手写各类简易版组件）
+
+### my-openfeign（手写简易版openfeign）
+
+启动eureka-server注册中心，然后启动order-service订单服务，之后运行对应test测试用例的手写案例，即可得到结果：
+
+![image-20220718154557814](https://pictured-bed.oss-cn-beijing.aliyuncs.com/img/2022/6/202207181545974.png)  
+
+对应手写学习教程：[手写feign的过程](https://www.bilibili.com/video/BV1f94y1U7AB?p=24&vd_source=b19269a4ae00481d5ff13d1897127b8b)
+
+对应章节笔记：[04、SpringCloud之Feign组件学习笔记](https://blog.csdn.net/cl939974883/article/details/125851673?csdn_share_tail=%7B%22type%22%3A%22blog%22%2C%22rType%22%3A%22article%22%2C%22rId%22%3A%22125851673%22%2C%22source%22%3A%22cl939974883%22%7D&ctrtid=0HFV7)
+
+### my-hystrix（手写简易版hystrix）
+
+![image-20220718154948687](https://pictured-bed.oss-cn-beijing.aliyuncs.com/img/2022/6/202207181549763.png)    
+
+对应手写学习教程：[手写断路器](https://www.bilibili.com/video/BV1f94y1U7AB?p=34&vd_source=b19269a4ae00481d5ff13d1897127b8b)
+
+对应学习笔记：[05、SpringCloud之Hystrix组件学习笔记](https://changlu.blog.csdn.net/article/details/125851797)
+
+---
 # java-lear23designpatterns
 > 设计模式java实现
 
@@ -188,8 +214,6 @@ step2：运行项目即可！
 +   xyz.changlu.strategy：策略模式
 
 +   xyz.changlu.template：模板方法模式
-
-
 
 <br/>
 

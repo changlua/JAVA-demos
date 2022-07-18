@@ -1,0 +1,18 @@
+server:
+  port: 8082
+spring:
+  application:
+    name: user-service
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+
+ribbon:  #feign 默认调用 1s 超时
+  ReadTimeout: 3000   #修改调用时长为 5s
+  ConnectTimeOut: 5000  # 修改连接时长为5s
+
+# 日志等级选择
+logging:
+  level:
+    com.changlu.userservice.feign.UserOrderFeign: debug  # 我需要答应这个接口下面的日志
