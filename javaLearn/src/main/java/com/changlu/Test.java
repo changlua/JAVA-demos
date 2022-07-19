@@ -1,6 +1,6 @@
 package com.changlu;
 
-import java.util.ArrayList;
+import java.util.Arrays;
 
 /**
  * @Description:
@@ -10,15 +10,10 @@ import java.util.ArrayList;
 public class Test {
 
     public static void main(String[] args) {
-        ArrayList<Integer> nums = new ArrayList<>();
-        nums.add(1);
-        nums.add(2);
-        System.out.println(nums);
-        ArrayList<Integer> targets = new ArrayList<>();
-        targets.addAll(nums);
-        nums.remove(0);
-        System.out.println(nums);
-        System.out.println(targets);
+        String str = "20EE:FGb8:85a3:0:0:8A2E:0370:7334";
+        char[] chars = str.toCharArray();
+        chars[5] = 5 + '0';
+        System.out.println(Arrays.toString(chars));
     }
 
 
