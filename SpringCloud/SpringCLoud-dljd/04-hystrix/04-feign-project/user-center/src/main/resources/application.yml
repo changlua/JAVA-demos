@@ -22,3 +22,10 @@ eureka:
 feign:
   hystrix:
     enabled: true
+
+# 添加监控
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'

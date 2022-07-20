@@ -15,6 +15,7 @@
         <module>03-openfeign</module>
         <module>05-Hystrix</module>
         <module>04-hystrix</module>
+        <module>05-admin-serveer</module>
     </modules>
 
 
