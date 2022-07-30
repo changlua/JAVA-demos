@@ -16,6 +16,7 @@
         <module>05-Hystrix</module>
         <module>04-hystrix</module>
         <module>05-admin-serveer</module>
+        <module>06-gateway</module>
     </modules>
 
 
