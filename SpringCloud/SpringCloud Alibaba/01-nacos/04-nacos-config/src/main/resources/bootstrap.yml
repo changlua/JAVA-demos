@@ -1,0 +1,27 @@
+server:
+  port: 8088
+spring:
+  application:
+    name: nacos-config
+  profiles:
+    active: pro
+  cloud:
+    nacos:
+      username: nacos
+      password: nacos
+      config:
+        server-addr: localhost:8848  # 注册到nacos的注册中心的服务地址
+        namespace: 477245fa-d5e1-47e0-9580-4a8e268c3f58   # 若是不指定，默认就是public
+        group: A_GROUP   # 若是不 指定，默认是DEFAULT_GROUP
+        file-extension: yaml  # 文件类型
+        shared-configs:  # 共享变量
+          - data-id: nacos-config.yaml
+            group: DEFAULT_GROUP
+            refresh: true # 是否支持刷新
+        extension-configs:  # 扩展配置文件
+          - data-id: nacos-config-a.yaml
+            group: A_GROUP
+            refresh: true # 是否支持刷新
+          - data-id: nacos-config-b.yaml
+            group: B_GROUP
+            refresh: true # 是否支持刷新

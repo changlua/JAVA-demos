@@ -17,6 +17,7 @@
         <module>04-hystrix</module>
         <module>05-admin-serveer</module>
         <module>06-gateway</module>
+        <module>07-nacos</module>
     </modules>
 
 

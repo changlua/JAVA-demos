@@ -1,0 +1,16 @@
+server:
+  port: 8082
+
+spring:
+  application:
+    name: nacos-client-b  # 服务名
+  cloud:
+    nacos:  # 如果不指定命名空间会默认注册到public里面去 如果没有指定分组 会注册到DEFAULT_GROUP
+      server-addr: localhost:8848  # 指定服务注册地址
+      username: nacos
+      password: nacos
+      discovery:
+        namespace: 477245fa-d5e1-47e0-9580-4a8e268c3f58   # 若是不指定，默认就是public
+        group: B_GROUP   # 若是不指定，默认是DEFAULT_GROUP
+        service: nacos-client-b   # 默认使用的是spring.application.name，这里可以进行指定
+
