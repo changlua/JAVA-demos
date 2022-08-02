@@ -1,0 +1,33 @@
+server:
+  port: ${SERVER_PORT:8081}
+spring:
+  application:
+    name: user-service
+  cloud:
+    nacos:  # nacos配置
+      server-addr: localhost:8848
+      username: nacos
+      password: nacos
+      discovery:
+        namespace: 477245fa-d5e1-47e0-9580-4a8e268c3f58
+        group: DEFAULT_GROUP
+        service: user-service
+    sentinel: # sentinel配置
+      transport:
+        dashboard: localhost:8858
+      # 关闭Context收敛，这样被监控方法可以进行不同链路的单独控制
+      web-context-unify: false
+      # 将刚刚编写的请求映射设定为限流页面
+      block-page: /blocked
+
+# 开启feign的sentinel流量治理
+feign:
+  sentinel:
+    enabled: true
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'

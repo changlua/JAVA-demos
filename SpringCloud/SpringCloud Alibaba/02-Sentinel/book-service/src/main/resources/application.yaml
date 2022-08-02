@@ -1,0 +1,27 @@
+server:
+  port: ${SERVER_PORT:8083}
+spring:
+  application:
+    name: book-service
+  cloud:
+    nacos:
+      server-addr: localhost:8848
+      username: nacos
+      password: nacos
+      discovery:
+        namespace: 477245fa-d5e1-47e0-9580-4a8e268c3f58
+        group: DEFAULT_GROUP
+        service: book-service
+    sentinel: # sentinel配置
+      transport:
+        dashboard: localhost:8858
+      # 关闭Context收敛，这样被监控方法可以进行不同链路的单独控制
+      web-context-unify: false
+      # 将刚刚编写的请求映射设定为限流页面
+      block-page: /blocked
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
