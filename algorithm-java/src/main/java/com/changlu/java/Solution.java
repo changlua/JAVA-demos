@@ -1,101 +1,102 @@
-package com.changlu.java;
-
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-
-public class Solution {
-
-    public static void main(String[] args) {
-        Solution solution = new Solution();
-        System.out.println(solution.Permutation("changlu"));
-    }
-
-    public ArrayList<String> Permutation(String str) {
-        List<String> resultList = new ArrayList<>();
-        if(str.length() == 0)
-            return (ArrayList)resultList;
-        //递归的初始值为（str数组，空的list，初始下标0）
-        fun(str.toCharArray(),resultList,0);
-        Collections.sort(resultList);
-        return (ArrayList)resultList;
-    }
-
-    private void fun(char[] ch,List<String> list,int i){
-        //这是递归的终止条件，就是i下标已经移到char数组的末尾的时候，考虑添加这一组字符串进入结果集中
-        if(i == ch.length-1){
-            //判断一下是否重复
-            if(!list.contains(new String(ch))){
-                list.add(new String(ch));
-                return;
-            }
-        }else{
-            //这一段就是回溯法，这里以"abc"为例
-
-            //递归的思想与栈的入栈和出栈是一样的,某一个状态遇到return结束了之后，会回到被调用的地方继续执行
-
-            //1.第一次进到这里是ch=['a','b','c'],list=[],i=0，我称为 状态A ，即初始状态
-            //那么j=0，swap(ch,0,0)，就是['a','b','c']，进入递归，自己调自己，只是i为1，交换(0,0)位置之后的状态我称为 状态B
-            //i不等于2，来到这里，j=1，执行第一个swap(ch,1,1)，这个状态我称为 状态C1 ,再进入fun函数，此时标记为T1，i为2，那么这时就进入上一个if，将"abc"放进list中
-            /////////////-------》此时结果集为["abc"]
-
-            //2.执行完list.add之后，遇到return，回退到T1处，接下来执行第二个swap(ch,1,1)，状态C1又恢复为状态B
-            //恢复完之后，继续执行for循环，此时j=2,那么swap(ch,1,2),得到"acb"，这个状态我称为C2,然后执行fun，此时标记为T2,发现i+1=2,所以也被添加进结果集，此时return回退到T2处往下执行
-            /////////////-------》此时结果集为["abc","acb"]
-            //然后执行第二个swap(ch,1,2)，状态C2回归状态B,然后状态B的for循环退出回到状态A
-
-            //             a|b|c(状态A)
-            //               |
-            //               |swap(0,0)
-            //               |
-            //             a|b|c(状态B)
-            //             /  \
-            //   swap(1,1)/    \swap(1,2)  (状态C1和状态C2)
-            //           /      \
-            //         a|b|c   a|c|b
-
-            //3.回到状态A之后，继续for循环，j=1,即swap(ch,0,1)，即"bac",这个状态可以再次叫做状态A,下面的步骤同上
-            /////////////-------》此时结果集为["abc","acb","bac","bca"]
-
-            //             a|b|c(状态A)
-            //               |
-            //               |swap(0,1)
-            //               |
-            //             b|a|c(状态B)
-            //             /  \
-            //   swap(1,1)/    \swap(1,2)  (状态C1和状态C2)
-            //           /      \
-            //         b|a|c   b|c|a
-
-            //4.再继续for循环，j=2,即swap(ch,0,2)，即"cab",这个状态可以再次叫做状态A，下面的步骤同上
-            /////////////-------》此时结果集为["abc","acb","bac","bca","cab","cba"]
-
-            //             a|b|c(状态A)
-            //               |
-            //               |swap(0,2)
-            //               |
-            //             c|b|a(状态B)
-            //             /  \
-            //   swap(1,1)/    \swap(1,2)  (状态C1和状态C2)
-            //           /      \
-            //         c|b|a   c|a|b
-
-            //5.最后退出for循环，结束。
-
-            for(int j = i; j < ch.length; j++){
-                swap(ch, i, j);
-                fun(ch, list,i+1);
-                swap(ch, i, j);
-            }
-        }
-    }
-
-    //交换数组的两个下标的元素
-    private void swap(char[] str, int i, int j) {
-        if (i != j) {
-            char t = str[i];
-            str[i] = str[j];
-            str[j] = t;
-        }
-    }
-}
+//package com.changlu.java;
+//
+//import java.util.Comparator;
+//import java.util.PriorityQueue;
+//
+///**
+// * @Description:
+// * @Author: changlu
+// * @Date: 8:22 PM
+// */
+//public class Solution {
+//
+//    public static int max = 0;
+//
+//    public static void main(String[] args)
+//    }
+//
+//    //前导空格
+//    //+-号
+//    //整数>32位
+//    //前导空格
+//    //+-号
+//    //整数>32位
+//    public int myAtoi(String s) {
+//        if (s == null) return 0;
+//        //去除前导0
+//        s = s.trim();
+//        char[] arr = s.toCharArray();
+//        if (s.length() == 0) {
+//            return 0;
+//        }
+//        //判断是否是正负
+//        int sign = 1;
+//        int i = 1;
+//        if (arr[0] == '-') {
+//            sign = -1;
+//        }else if (arr[0] != '+'){
+//            i = 0;
+//        }
+//        int res = 0;
+//        //-2147483648  2147483647
+//        for (int j = i; j < arr.length; j++) {
+//            if (arr[j] < '0' || arr[j] > '9') {
+//                break;
+//            }
+//            //提前预判
+//            if (res > 214748364 || (res == 214748364 && arr[j] >= '7')) {
+//                return sign == 1 ? Integer.MAX_VALUE : Integer.MIN_VALUE;
+//            }
+//            res = res * 10 + (arr[j] - '0');
+//        }
+//        return res * sign;
+//    }
+//}
+//class UnionFind {
+//    private int size;
+//    private int[] parent;
+//    private int[] weight;
+//
+//    public UnionFind(int[][] grid) {
+//        int len1 = grid.length;
+//        int len2 = grid[0].length;
+//        this.size = len1 * len2;
+//        this.parent = new int[size];
+//        this.weight = new int[size];
+//        for (int i = 0; i < len1; i++) {
+//            for (int j = 0; j < len2; j++) {
+//                parent[i * len1 + j] = i * len1 + j;
+//                if (grid[i][j] == 1) {
+//                    weight[i * len1 + j] = 1;
+//                }else {
+//                    weight[i * len1 + j] = 0;
+//                }
+//            }
+//        }
+//    }
+//
+//    public int find(int x) {
+//        if (x == parent[x]) {
+//            return x;
+//        }else {
+//            parent[x] = find(parent[x]);
+//            return parent[x];
+//        }
+//    }
+//
+//    public void merge(int x, int y) {
+//        int _x = find(x);
+//        int _y = find(y);
+//        if (_x == _y) return;
+//        if (weight[_x] < weight[_y]) {
+//            int temp = _x;
+//            _x = _y;
+//            _y = temp;
+//        }
+//        //连通结点
+//        parent[_y] = _x;
+//        weight[_x] += weight[_y];
+//        Solution.max = Math.max(Solution.max, weight[_x]);
+//        --size;
+//    }
+//}
