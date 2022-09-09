@@ -1,6 +1,7 @@
 package com.changlu.springboottest.controller;
 
 import com.changlu.springboottest.pojo.User;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -16,6 +17,7 @@ import java.util.Map;
 @RestController
 public class TestController {
 
+    @CrossOrigin
     @RequestMapping("/test")
     public Map<String, Object> test() {
         Map<String, Object> res = new HashMap();
