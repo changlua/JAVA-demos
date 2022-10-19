@@ -1,15 +1,12 @@
 package com.changlu.java.排序算法;
 
-import java.util.Arrays;
-import java.util.GregorianCalendar;
-
 /**
  * @ClassName MergeSort
  * @Author ChangLu
  * @Date 4/25/2022 11:43 PM
  * @Description 归并排序
  */
-public class MergeSort {
+public class MergeSort{
 
     public static void main(String[] args) {
 //        int[] array = {8, 4, 5, 7, 1, 3, 6, 2, 5, 5, 5};
@@ -24,7 +21,13 @@ public class MergeSort {
 //        System.out.println("排序后数组："+Arrays.toString(array));
         System.out.println("花费时间为:"+(double)(end-begin)/1000+"秒");
 //        System.out.println(Arrays.toString(array));
-        System.out.println(new GregorianCalendar().getTime());
+
+        doReadFile();//读文件
+
+    }
+
+    public static void doReadFile() {
+        System.out.println("doFile");
     }
 
     //空间复杂度O(n)，时间复杂度O(nlogn)
@@ -65,5 +68,4 @@ public class MergeSort {
         //更高效的拷贝方法
         System.arraycopy(temp, 0, array, left, right - left + 1);
     }
-
 }

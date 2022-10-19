@@ -1,6 +1,7 @@
 package com.changlu.java;
 
-import java.math.BigInteger;
+
+import java.util.*;
 
 /**
  * @Description:
@@ -28,59 +29,82 @@ class TreeNode {
 }
 
 public class Solution {
+    private static int n;
+    private static boolean[] v = new boolean[10];
+    //记录结果集
+    private static int ans;
 
-    public static void main(String[] args) {
-        //测试f(x)中x的一个指定范围得到的数
-//        int x = 0;
-//        while(x <= 25) {
-//            BigInteger res = new BigInteger("1");
-//            for (int i = 1; i <= x; i++) {
-//                res = res.multiply(new BigInteger(String.valueOf(i)));
-//            }
-//            int k = (x - 1) / 5;
-//            System.out.println(String.format("k = %d, x = %d, res = %d", k, x, res));
-//            x++;
-//        }
-        Solution solution = new Solution();
-        for (int i = 1; i < 32; i++) {
-            //5个0，当x=25，没有一个数字（此时6个0结尾）； 29个0，x=125
-            System.out.println(solution.preimageSizeFZF(i));
-        }
+    //检查
+    private static boolean check(int a, int c) {
+        //计算b
+        int b = n * c - a * c;
 
-    }
+        //提前剪枝（若是出现0则直接结束）
+        if (a == 0 || b <= 0 || c == 0) return false;
 
-    public int preimageSizeFZF(int K) {
-        //确定阶梯值范围 最终的到的K < start
-        int start = 1;
-        while (start < K){
-            start = start*5+1;
-        }
-
-        //确定范围后，执行精确查找
-        while (start > 1){
-            //只有5以下阶乘才会出现start-1成立，其它情况不会存在，因为任何一个阶段分界值都会包含一个以上的5
-            if(start-1 == K){
-                //不存在的返回0
-                return 0;
+        //复制拷贝是否存在的数组（避免重新恢复现场）
+        boolean[] vv = Arrays.copyOfRange(v, 0, v.length);
+        //遍历b的所有元素
+        while (b != 0) {
+            int x = b % 10;
+            //若是b中出现0或者之前已经出现过，此时直接就结束
+            try {
+                if (x == 0 || vv[x]) return false;
+            }catch (Exception ex) {
+                ex.printStackTrace();
             }
-
-            //逆推下一个阶梯值 从f(x+1) 推导出f(x)
-            start=(start-1)/5;
-
-            //获取剩余值，进行下一阶梯运算
-            K%=start;
+            //记录访问过
+            vv[x] = true;
+            b = b / 10;
         }
-
-        //只要存在，必然是5个
-        return 5;
+        //遍历10个数是否都有存在
+        for (int i = 1; i <= 9; i++) {
+            if (!vv[i]) return false;
+        }
+        return true;
     }
 
-    public void caluate() {
-        BigInteger a = new BigInteger("1");
-        for (int i = 2; i <= 30; i++) {
-            a = a.multiply(new BigInteger(String.valueOf(i)));
+    public static void dfs_c(int u, int a, int c) {
+        //c以n的最大长度最为基准
+        if (u == n) return;
+        //相当于枚举出来一组a,c
+        if (check(a, c)) ans++;
+
+        //向下递归推举出下一个c
+        for (int i = 1; i <= 9; i++) {
+            if (!v[i]) {
+                v[i] = true;
+                dfs_c(u + 1, a, c * 10 + i);
+                v[i] = false;
+            }
         }
-        System.out.print(a);
+    }
+
+    //在进行递归推的时候算出a的值
+    public static void dfs_a(int u, int a) {
+        //若是a的值>=n数字，此时就直接提前结束
+        if (a >= n) return;
+        //符合条件情况，向下递归推出c
+        if (a != 0) {
+            dfs_c(u, a, 0);
+        }
+
+        for (int i = 1; i <= 9; i++) {
+            if (!v[i]) {
+                v[i] = true;
+                dfs_a(u + 1, a * 10 + i);
+                v[i] = false;
+            }
+        }
+    }
+
+    //枚举出来a,c => 推出b，最后进行check检查
+    //全排列+check检查【更加复杂】
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        n = sc.nextInt();
+        dfs_a(0, 0);
+        System.out.printf("%d", ans);
     }
 
 }

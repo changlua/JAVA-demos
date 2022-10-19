@@ -1,10 +1,9 @@
 package xyz.changlu.Proxy.JDKDynamic2;
 
-import org.junit.Test;
+import org.testng.annotations.Test;
 import sun.misc.ProxyGenerator;
 
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
