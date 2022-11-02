@@ -30,7 +30,7 @@ class TreeNode {
 public class Huffman {
 
     public static void main(String[] args) {
-        String s = "abbbbeeerrryuiolll";
+        String s = "aaabbbeeedacfwwwwddd";
         System.out.println("编码前：" + s);
         //编码API
         Object[] encodeRes = encode(s);
@@ -124,7 +124,7 @@ public class Huffman {
         //1、统计每个字符出现的权重
         Map<Character, Integer> cntMap = new HashMap<>();
         for (int i = 0; i < s.length(); i++) {
-            cntMap.put(s.charAt(i), cntMap.getOrDefault(s.charAt(i), 0));
+            cntMap.put(s.charAt(i), cntMap.getOrDefault(s.charAt(i), 1));
         }
         //2、将所有的字符构建成TreeNode节点存储到LinkedList中
         LinkedList<TreeNode> nodelist = new LinkedList<>();
