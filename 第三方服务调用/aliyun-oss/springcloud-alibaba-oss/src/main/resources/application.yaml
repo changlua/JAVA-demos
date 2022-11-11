@@ -1,0 +1,11 @@
+server:
+  port: 8888
+spring:
+  cloud:
+    alicloud:
+      access-key:
+      secret-key:
+      oss:
+        endpoint:
+        # 这是自定义的，需要自己来去读取
+        bucketname:
