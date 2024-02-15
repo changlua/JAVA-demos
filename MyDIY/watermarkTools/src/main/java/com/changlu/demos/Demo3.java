@@ -5,11 +5,8 @@ import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.pdmodel.PDPage;
 import org.apache.pdfbox.pdmodel.PDPageContentStream;
 import org.apache.pdfbox.pdmodel.font.PDType0Font;
-import org.apache.pdfbox.pdmodel.graphics.image.PDImageXObject;
-import org.apache.pdfbox.pdmodel.graphics.state.PDExtendedGraphicsState;
 
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.InputStream;
 import java.net.URLDecoder;
 import java.nio.file.Files;
@@ -31,12 +28,6 @@ public class Demo3 {
         String fontFile = URLDecoder.decode(Main.class.getClassLoader().getResource(File.separator + "ttfs" + File.separator + "Alibaba_PuHuiTi_2.0_65_Medium_65_Medium.ttf").getFile(), "UTF-8");
         PDType0Font font = PDType0Font.load(pdDocument, new File(fontFile));
         float fontSize = 10; // 设置字体大小为12
-
-        // 设置透明度状态对象
-        PDExtendedGraphicsState graphicsState = new PDExtendedGraphicsState();
-        graphicsState.setNonStrokingAlphaConstant(0.2f);
-        graphicsState.setAlphaSourceFlag(true);
-        graphicsState.setStrokingAlphaConstant(0.2f);
 
         //设置新的页眉
         String headerText = "咨询专转本默默学课程联系官方报名处QQ：3503851091，更多资料可加群828303961";

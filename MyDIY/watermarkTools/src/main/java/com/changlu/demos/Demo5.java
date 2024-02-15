@@ -25,20 +25,6 @@ public class Demo5 {
         InputStream is = Main.class.getClassLoader().getResourceAsStream("input.pdf");
         PDDocument pdDocument = PDDocument.load(is);
 
-        //自定义字体 C:\Users\93997\Desktop\watermark tools\watermarkTools\target\classes\ttfs
-        //URLDecoder.decode() 方法来解码 URL 编码的路径，将 %20 转换回空格
-        String fontFile = URLDecoder.decode(Main.class.getClassLoader().getResource(File.separator + "ttfs" + File.separator + "Alibaba_PuHuiTi_2.0_65_Medium_65_Medium.ttf").getFile(), "UTF-8");
-        PDType0Font font = PDType0Font.load(pdDocument, new File(fontFile));
-
-        // 设置透明度状态对象
-        PDExtendedGraphicsState graphicsState = new PDExtendedGraphicsState();
-        graphicsState.setNonStrokingAlphaConstant(0.2f);
-        graphicsState.setAlphaSourceFlag(true);
-        graphicsState.setStrokingAlphaConstant(0.2f);
-
-        //设置水印名
-        String waterText = "江苏专转本网课报名vx：mmxchanglu";
-
         //遍历原先的pdf文档
         for (PDPage page : pdDocument.getPages()) {
             float pageWidth = page.getMediaBox().getWidth();
@@ -50,7 +36,7 @@ public class Demo5 {
 //            PDImageXObject image = PDImageXObject.createFromFile("C:\\Users\\93997\\Desktop\\watermark tools\\watermarkTools\\src\\main\\resources\\images\\ConsultationGroupQRCode.jpg", pdDocument);
             String pictureFile = URLDecoder.decode(Main.class.getClassLoader().getResource(File.separator + "images" + File.separator + "ConsultationGroupQRCode.jpg").getFile(), "UTF-8");
             PDImageXObject image = PDImageXObject.createFromFile(pictureFile, pdDocument);
-            // 计算图像的宽度和高度（缩小比例为0.3）
+            // 计算图像的宽度和高度（缩小比例为0.25）
             float imageWidth = (float) (image.getWidth() * 0.25);
             float imageHeight = (float) (image.getHeight() * 0.25);
             //具体图片位置

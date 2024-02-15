@@ -16,6 +16,7 @@ public class Demo1 {
         //读取resources目录下input.pdf文件
         String inputFile = URLDecoder.decode(Demo1.class.getClassLoader().getResource("input.pdf").getFile(), "UTF-8");
         PDDocument pdDocument = PDDocument.load(new File(inputFile));
+        //用于读取文本内容
         PDFTextStripper pdfTextStripper = new PDFTextStripper();
         //读取pdf中所有的文件
         String fullText = pdfTextStripper.getText(pdDocument);
