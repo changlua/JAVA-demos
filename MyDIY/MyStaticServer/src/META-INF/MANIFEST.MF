@@ -1,3 +1,3 @@
 Manifest-Version: 1.0
-Main-Class: xyz.changlu.Server
+com.changlu.Main-Class: xyz.changlu.Server
 
